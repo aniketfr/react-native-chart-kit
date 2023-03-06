@@ -913,8 +913,9 @@ class LineChart extends AbstractChart<LineChartProps, LineChartState> {
                     })
                   : null)}
             </G>
+            {withVerticalLabels &&
             <G>
-              {withVerticalLabels &&
+              {
                 this.renderVerticalLabels({
                   ...config,
                   labels,
@@ -922,7 +923,7 @@ class LineChart extends AbstractChart<LineChartProps, LineChartState> {
                   paddingRight: paddingRight as number,
                   formatXLabel
                 })}
-            </G>
+            </G>}
             <G>
               {this.renderLine({
                 ...config,
